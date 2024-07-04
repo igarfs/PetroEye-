@@ -1,0 +1,33 @@
+
+h2{
+width: 100%;
+position:unset;
+top: 0%;
+background-color: #ffffff;
+padding: 0px 0px;
+margin-left: 0px;
+font-size: 15px;
+font-family: Arial, Helvetica, sans-serif;
+text-align: center;
+}
+.title{
+    margin-top: 100px;
+    margin-left: 30px;
+    text-align: center;
+}
+hr{
+   
+    width: 100;
+    border: none; 
+    height: 3px; 
+    background-color: rgb(255, 143, 28); 
+    margin: 20px 0px; 
+}
+p{
+text-align: justify;
+margin: 0px 80px;
+}
+h3{
+margin-left: 80px;
+
+}

@@ -1,0 +1,228 @@
+
+body {
+
+    margin: 0px;
+
+}
+header {
+    display:inline-block;
+    background-color: #11111f;
+    padding: 0px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    z-index: 1000;    
+    }
+  
+  
+    header ul {
+    color: #11111f; 
+    }
+  
+  
+  .logo {
+    height: 5%;
+    width: auto;
+    margin-left: 50px;
+    
+    position: fixed;
+  }
+  
+  h1 {
+    color: white;
+    font-family: Inter, var(--default-font-family);
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+  }
+  
+  .menu {
+    cursor: pointer;
+    position: fixed;
+    height: 5%;
+    width: auto;
+    float: left;
+    }
+  
+    .menu-wrapper {
+    
+      position: absolute;
+    top: -500px;
+    left: 0;
+    width: 20%;
+    height: 600%;
+    background-color: #c9c9c9;
+    padding: 0;
+    
+    transition: top 0.5s;
+    z-index: 0;
+    }
+    .menu-wrapper ul {
+  
+      margin-top: 10%;
+      height: 80%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      list-style: none;
+      align-items: center;
+      padding: 0px;
+  
+    }
+    a {
+
+      list-style: none;
+      text-decoration: none;
+      color:#000000 ;
+
+    }
+  
+  
+  .search-wrapper {
+    
+    position: absolute;
+    top: 25%;
+    right: -500px;
+    width: 500px;
+    height: 40px;
+    background-color: #c9c9c9;
+    padding: 0;
+    border-radius: 25px;
+    transition: left 0.5s;
+  }
+  
+  .search-bar {
+  
+    width: 425px;
+    height: 20px;
+    padding: 10px 0px 10px 10px;
+    margin-left:10px;
+    border-radius: 20px;
+    border: none; 
+    position: relative; 
+    background-color: transparent;
+    outline:none;
+  }
+  
+  .lupa {
+    cursor: pointer;
+    position: absolute; 
+    right: 20px; 
+    top: 50%; 
+    transform: translateY(-50%);
+    height: 25px;
+    z-index: 10;
+  }
+
+
+/*Estilo do corpo da página*/
+h2{
+    width: 100%;
+    position: absolute;
+    top: 6%;
+    background-color: #D9D9D9;
+    padding: 7px 50px;
+    margin-left: 0px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#bacia{
+margin-left: 500px;
+}
+#loc{
+margin-top: -63px;
+margin-left: 700px;
+}
+#localizacao{
+margin-left: 700px;
+margin-top: -15px;
+}
+label, input, button {
+display: block;
+margin-bottom: 10px;
+}
+
+table {
+width: 600px;
+border-collapse: collapse;
+margin-left: 500px;
+}
+
+th, td {
+border: 1px solid #ddd;
+padding: 8px;
+text-align: left;
+}
+td{
+align-items: center;
+}
+th {
+background-color: #f2f2f2;
+text-align: center;
+}
+button{
+margin-left: 500px;
+background-color: rgb(255, 143, 28);
+color: black; /* texto branco para contrastar */
+padding: 5px 15px; /* espaço interno */
+border: none; /* sem borda */
+border-radius: 3px; /* bordas arredondadas */
+cursor: pointer; /* cursor de mão ao passar por cima */
+font-size: 10px; /* tamanho da fonte */
+font-weight: lighter; /* texto em negrito */
+text-transform: none; /* texto em maiúsculas */
+transition: background-color 0.3s ease; /* transição suave ao mudar a cor de fundo */
+width: 100px;
+
+}
+h3{
+margin-left: 500px;
+}
+.enviar{
+margin-left: 83%;
+margin-top: -1.7%;
+}
+.limpa{
+margin-top: 16%;
+margin-left: 90%;
+}
+.menu-lateral {
+position: fixed;
+left: 0;
+top: 0;
+width: 15%;
+height: 100%;
+margin-top: 4%;
+color: #fff;
+padding: 1%;
+}
+.menu-l {
+margin-top: 60px;
+}
+
+.menu-l a {
+display: block;
+padding: 3% 5%;
+margin-bottom: 5%;
+background-color: #D9D9D9;
+color: black;
+text-decoration: none;
+text-align: center;
+}
+
+#myForm {
+
+    width: 100%;
+    position: absolute;
+    top: 18%;
+    z-index: -3;
+
+}

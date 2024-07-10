@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,4 +36,7 @@ Route::get('/mapa', function () {
     return view('administrativo.mapa');
 });
 
+
+Route::get('/pocos', 'App\Http\Controllers\Administrativo\PocosController@listar');
+Route::get('/pocos/cadastro', 'App\Http\Controllers\Administrativo\PocosController@cadastro');
 

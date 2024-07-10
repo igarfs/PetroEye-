@@ -18,39 +18,6 @@
 
 </div>
 
-<div id="elements">
-
-  <div class="oval"></div>
-
-    <div class="base-2"></div>
-
-  <div class="text">
-    <div class="icon-right"></div>
-    <span class="abingdon">Bacia de Campos</span>
-  </div>
-</div>
-<div id="elements2">
-
-  <div class="oval"></div>
-
-    <div class="base-2"></div>
-
-  <div class="text">
-    <div class="icon-right"></div>
-    <span class="abingdon">Bacia de Campos</span>
-  </div>
-</div>
-<div id="elements3">
-
-  <div class="oval"></div>
-
-    <div class="base-2"></div>
-
-  <div class="text">
-    <div class="icon-right"></div>
-    <span class="abingdon">Bacia de Campos</span>
-  </div>
-</div>
 
 <div id="elements4">
 
@@ -84,7 +51,7 @@
       </table>
       </div>
     <div id="text-001"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus ultricies ante vitae facilisis. Vestibulum iaculis ultricies mattis. Aliquam erat volutpat. Fusce lectus lorem, ornare nec accumsan ut, venenatis vitae purus. Nunc eu urna ipsum. Nulla facilisi. Nullam vitae sollicitudin leo, quis egestas tellus. Praesent sagittis magna eget magna maximus, non cursus justo interdum. Vivamus non finibus neque, quis elementum elit. Vivamus vulputate efficitur efficitur.</p></div>
-    <div id="text-002"><p>© 2024 ProtoEyeMonitoring    |    Política de Privacidade e Cookies</p><p>Agência Nacional de Petróleo, Gás Natural e Biocombustíveis (ANP)</p></div>
+  
       <div class="drag-title"><h1>bacia de campos</h1></div>
       <div class="drag-next"><h2>campos>></h2></div>
       <div id="dragbutton"></div>
@@ -93,8 +60,6 @@
 
 </div>
 
-<div class="ellipse"></div>
-<div class="rectangle"></div>
 
 </div>
 @endsection

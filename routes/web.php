@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\Administrativo\;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/', [MapController::class, 'administrativo.home']);
+
+/*
 Route::get('/', function () {
     return view('administrativo.home');
 });
+*/
 
 Route::get('/campo', function () {
     return view('administrativo.campo');

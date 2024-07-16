@@ -14,29 +14,32 @@
      and consistent behavior across browsers, consider loading using Promises
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
-    <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap" async defer></script>
-
     <script>
         function initMap() {
-            // Configuração do mapa
             var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 4,
-                center: { lat: -15.7801, lng: -47.9292 } // Posição central inicial do mapa
+                center: { lat: -15.7801, lng: -47.9292 }
             });
 
-            // Array de locais vindo do PHP
             var locations = @json($locations);
 
-            // Adiciona marcadores no mapa
             locations.forEach(function(location) {
-                var marker = new google.maps.Marker({
-                    position: { lat: location.lat, lng: location.lng },
+                var position = { lat: parseFloat(location.lat), lng: parseFloat(location.lng) };
+                new google.maps.Marker({
+                    position: position,
                     map: map,
                     title: location.title
                 });
             });
         }
     </script>
+
+
+
+<script async
+        src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap">
+    </script>
+
 
 </div>
 

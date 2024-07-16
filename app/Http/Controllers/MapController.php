@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class MapController extends Controller
 {
-    public function index()
+    public function administrativohome()
     {
         // Array de endereços - pode vir de um banco de dados ou outra fonte de dados
         $locations = [
@@ -16,7 +16,7 @@ class MapController extends Controller
             // Adicione mais endereços conforme necessário
         ];
 
-        return view('map', compact('locations'));
+        return view('administrativo.home', compact('locations'));
     }
 }
-?>
+

@@ -2,7 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\Administrativo\;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +14,17 @@ use App\Http\Controllers\Administrativo\;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+use App\Http\Controllers\MapController;
 
 
-Route::get('/', [MapController::class, 'administrativo.home']);
+Route::get('/', [MapController::class, 'administrativoHome'])->name('administrativo.home');
 
 /*
 Route::get('/', function () {
     return view('administrativo.home');
 });
 */
+
 
 Route::get('/campo', function () {
     return view('administrativo.campo');

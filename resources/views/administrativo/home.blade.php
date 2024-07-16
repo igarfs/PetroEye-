@@ -2,7 +2,7 @@
 
 @section('conteudo')
 <div class="backgroundmap">
-    <script src="assets/js/mapa.js"></script>
+
 
 
 
@@ -15,6 +15,28 @@
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
     <script src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap" async defer></script>
+
+    <script>
+        function initMap() {
+            // Configuração do mapa
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: { lat: -15.7801, lng: -47.9292 } // Posição central inicial do mapa
+            });
+
+            // Array de locais vindo do PHP
+            var locations = @json($locations);
+
+            // Adiciona marcadores no mapa
+            locations.forEach(function(location) {
+                var marker = new google.maps.Marker({
+                    position: { lat: location.lat, lng: location.lng },
+                    map: map,
+                    title: location.title
+                });
+            });
+        }
+    </script>
 
 </div>
 
@@ -51,7 +73,7 @@
       </table>
       </div>
     <div id="text-001"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus ultricies ante vitae facilisis. Vestibulum iaculis ultricies mattis. Aliquam erat volutpat. Fusce lectus lorem, ornare nec accumsan ut, venenatis vitae purus. Nunc eu urna ipsum. Nulla facilisi. Nullam vitae sollicitudin leo, quis egestas tellus. Praesent sagittis magna eget magna maximus, non cursus justo interdum. Vivamus non finibus neque, quis elementum elit. Vivamus vulputate efficitur efficitur.</p></div>
-  
+
       <div class="drag-title"><h1>bacia de campos</h1></div>
       <div class="drag-next"><h2>campos>></h2></div>
       <div id="dragbutton"></div>

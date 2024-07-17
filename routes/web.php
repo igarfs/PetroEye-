@@ -42,10 +42,17 @@ Route::get('/perfil', function () {
     return view('administrativo.perfil');
 });
 
-Route::get('/mapa', function () {
-    return view('administrativo.mapa');
+Route::get('/bacia', function () {
+    return view('administrativo.formulario_bacia');
 });
 
+Route::get('/pocos', function () {
+    return view('administrativo.formulario_pocos');
+});
+
+Route::get('/campos', function () {
+    return view('administrativo.formulario_campo');
+});
 
 Route::get('/pocos', 'App\Http\Controllers\Administrativo\PocosController@listar');
 Route::get('/pocos/cadastro', 'App\Http\Controllers\Administrativo\PocosController@cadastro');

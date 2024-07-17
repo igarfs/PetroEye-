@@ -1,0 +1,100 @@
+body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f0eff6;
+ }
+ .container {
+     width: 250px;
+     font-size: 5px;
+     color: #fff;
+     position: fixed;
+     height: 100%;
+     padding-top: 20px;
+     margin-top: -25px;
+ }
+ .menu-block ul {
+     list-style-type: none;
+     padding: 0;
+ }
+ .menu-block ul li {
+     margin: 10px 0;
+ }
+ .menu-block ul li button {
+     width: 100%;
+     margin-left: 25px;
+     margin-top: 2px;
+     height: 70px;
+     background-color: #555;
+     color: #fff;
+     border: none;
+     border-radius: 8px;
+     cursor: pointer;
+     text-align: center;
+     font-size: 18px;
+ }
+ .menu-block ul li button:hover {
+     background-color: #666;
+     color: #FE8F1E;
+ }
+ h1 {
+     padding: 15px 30px;
+     background-color: lightgray;
+     text-align: center;
+     margin-top: 80px;
+     margin-left: 290px;
+     font-size: 25px;
+     font-family: Arial, sans-serif;
+ }
+ .form-group {
+     margin-left: 290px;
+     margin-top: 30px;
+     font-size: 25px;
+ }
+ .form-group input {
+     height: 30px;
+     width: 570px ;
+ }
+ #estado {
+     margin-left: 0px;
+ }
+ #data_inicio{
+     width: 100px;
+ }
+ table {
+     width: 30%;
+     margin: 20px auto;
+     border-collapse: collapse;
+ }
+ th {
+     border: 1px solid black;
+     padding: 10px;
+     text-align: center;
+     background-color: lightgray;
+ }
+ td {
+     border: 1px solid black;
+     padding: 12px;
+     text-align: center;
+ }
+ .botton {
+     margin-left: 290px;
+     width: 5%;
+     height: 5%;
+     padding: 8px;
+     background-color: #FE8F1E;
+     border: none;
+     font-size: 12px;
+     text-align: center;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+ .dataTable {
+     margin-left: 290px;
+ }
+ p {
+     margin-left: 290px;
+ }
+ td:empty:after {
+     content: '\00a0'; /* Garante que células vazias sejam clicáveis */
+ }

@@ -1,42 +1,65 @@
 @extends('administrativo.index')
 
 @section('conteudo')
-    <div id="jumper"></div>
-    <div id="bloco-01">
 
-    <div id="perfil">
-    <img class="foto" src="https://cdn-icons-png.flaticon.com/512/12225/12225828.png">
-    <p class="perfil">Mudar perfil</p>
-    </div>
-    <div class="campo">
-        <label for="imputname">Nome da empresa:</label><br>
-            <input type="text" id="imputname" name="imputname" required><br><br>
-        <label for="imputname">Administrador:</label><br>
-            <input type="text" id="imputname" name="imputname" required placeholder="Nome completo"><br><br>
-        <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required >
-    </div>
 
-    <div class="campo2">
-        <label for="cnpj">CNPJ:</label><br>
-        <input type="tezt" id="cnpj" name="cnpj" required><br><br>
-    <label for="imputname">Identificação:</label><br>
-        <input type="text" id="imputname" name="imputname" required placeholder="Do administrador"><br>
-    </div>
-    </div>
-    <hr/>
-    <h3 id="senha-title">Senha</h3>
-
-    <div class="campo3">
-        <label for="senha">Nova Senha</label><br>
-        <input type="password" id="senha" name="senha"><br>
-        <i class="bi bi-eye-fill" id="btn-senha" onclick="mostrarSenha()" ></i><br>
+<body>
+    <div class="container">
+        <!-- Quadro de foto -->
+        <div class="foto_perfil">
+            <img id="Image" src="https://media.bzi.ro/unsafe/0x600/smart/filters:contrast(3):format(jpeg):quality(100)/http://www.bzi.ro/wp-content/uploads/2022/01/farapoza-de-profil.jpg" alt="Foto de Perfil">
         </div>
-    <div class="campo4">
-        <label for="senhas">Confirmar Senha</label><br>
-        <input type="password" id="senhas" name="senhas" required>
-    </div> <br>
-    <button type="button" class="redefinir">Redefinir</button>
+        <!-- Link para alterar foto -->
+        <a class="editar" href="https://www.remove.bg/pt-br/upload">Editar foto</a>
+
+        <!-- Formulário -->
+        <div class="form-group">
+            <label for="empresa">Nome da empresa</label>
+            <input type="text" id="empresa" required>
+        </div>
+
+        <div class="form-group">
+            <label for="administrador">Administrador</label>
+            <input type="text" id="administrador" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cnpj">CNPJ</label>
+            <input type="text" id="cnpj" maxlength="14" required>
+        </div>
+
+        <div class="form-group">
+            <label for="identificacao">Identificação</label>
+            <input type="text" id="identificacao" required>
+        </div>
+
+        <hr class="hr">
+        <h1>Senha</h1>
+        <div class="form-group">
+            <label for="senha">Redefinir senha</label>
+            <input type="password" id="senha" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirmar_senha">Confirmar Senha</label>
+            <input type="password" id="confirmar_senha" required>
+            <button class="concluir" type="submit">Concluído</button>
+        </div>
+
+        <div class="button-group">
+
+        <button class="cancelar" type="button">Cancelar</button>
+            <button class="enviar" type="submit">Enviar</button>
+
+        </div>
+    </div>
+</body>
+</html>
 
 
 </body>

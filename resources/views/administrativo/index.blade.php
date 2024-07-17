@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,50 +6,40 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.4" />
   <title></title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
-  <link rel="stylesheet" href="/assets/css/bacias 01 (1).css" />
-  <link rel="stylesheet" href="/assets/css/css.css" />
-  <link rel="stylesheet" href="/assets/css/filtros.css" />
+
+  <link rel="stylesheet" href="/assets/css/style_header.css" />
   <link rel="stylesheet" href="/assets/css/perfil.css" />
-  <link rel="stylesheet" href="/assets/css/mapa.css" />
+  <link rel="stylesheet" href="/assets/css/style_formularios.css" />
+
+
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap"> </script>
 
-  <script src="/assets/js/bacias 01 (1).js"></script>
+  <script src="/assets/js/header.js"></script>
+  <script src="/assets/js/formularios.js"></script>
 </head>
 
 <body>
 
-  <header>
-    <ul>
-      <img src="/assets/images/logo.PNG" alt="Logo da Empresa" class="logo">
-      <h1>Bacias</h1>
-      <img src="/assets/images/lupa2.png" alt="lupa" class="lupa" id="lupa" onclick="pesquisar()">
-      <div class="search-wrapper">
+    <div class="header">
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <div class="logo">
+          <img src="assets/images/logo.png" alt="Logo">
+        </div>
+    </div>
 
-        <input type="text" class="search-bar" placeholder="Pesquisar...">
-      </div>
-      <img src="/assets/images/menu.PNG" alt="menu" class="menu" id="menu">
-      <div class="menu-wrapper">
-        <ul>
-
-          <li><a href="bacias 01 (1).html">bacias</a></li>
-          <li><a href="campo.html">campos</a></li>
-          <li><a href="poco.html">poços</a></li>
-          <hr>
-          <li><A href="perfil.html">perfil</A></li>
-          <li>historico</li>
-          <li>logistica</li>
-          <li><a href="sobre.html">sobre</a></li>
-          <li>modo noturno</li>
-
-        </ul>
-
-      </div>
-    </ul>
-  </header>
+    <div id="myNav" class="nav-list">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
+        <a href="bacia.php">Bacia</a>
+        <a href="campo.php">Campos</a>
+        <a href="pocos.php">Poços</a>
+        <a href="perfil.php">Perfil</a>
+        <a href="logistica.php">Logística</a>
+        <a href="historico.php">Historico</a>
+        <a href="sobre_nos.php">Sobre</a>
+    </div>
 
   <div class="main-container">
   @yield('conteudo')

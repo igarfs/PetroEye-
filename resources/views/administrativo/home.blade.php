@@ -84,6 +84,8 @@
 
 @push('scripts')
 <script>
+ setTimeout(initMap, 3000);
+
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 4,
@@ -112,6 +114,8 @@
             });
         });
     }
+
+
 </script>
 
 

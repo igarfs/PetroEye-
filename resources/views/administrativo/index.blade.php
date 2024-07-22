@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="/assets/css/style_header.css" />
   <link rel="stylesheet" href="/assets/css/perfil.css" />
   <link rel="stylesheet" href="/assets/css/style_formularios.css" />
+  <link rel="stylesheet" href="/assets/css/mapa.css" />
+  <link rel="stylesheet" href="/assets/css/css.css" />
+  <link rel="stylesheet" href="/assets/css/css2.css" />
 
 
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -19,6 +22,8 @@
 
   <script src="/assets/js/header.js"></script>
   <script src="/assets/js/formularios.js"></script>
+  <script src="/assets/js/js2.js"></script>
+  <script src="/assets/js/js.js"></script>
 </head>
 
 <body>

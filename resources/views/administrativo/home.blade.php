@@ -9,15 +9,15 @@
         <div id="map"></div>
 
         <!--
-             The 'defer' attribute causes the callback to execute after the full HTML
-             document has been parsed. For non-blocking uses, avoiding race conditions,
-             and consistent behavior across browsers, consider loading using Promises
-             with https://www.npmjs.com/package/@googlemaps/js-api-loader.
-            -->
+                 The 'defer' attribute causes the callback to execute after the full HTML
+                 document has been parsed. For non-blocking uses, avoiding race conditions,
+                 and consistent behavior across browsers, consider loading using Promises
+                 with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+                -->
 
 
 
-        
+
 
 
     </div>
@@ -83,8 +83,6 @@
 
 
 @push('scripts')
-
-
 <script>
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -102,15 +100,19 @@
                 lat: parseFloat(location.lat),
                 lng: parseFloat(location.lng)
             };
-            new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 position: position,
                 map: map,
                 title: location.title
             });
 
-
+            marker.addListener("click", () => {
+                $("#elements4").toggle();
+                $(".bottomdrag").css("top", "900px");
+            });
         });
-
     }
 </script>
+
+
 @endpush

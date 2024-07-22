@@ -1,33 +1,38 @@
-$(document).ready(function(){
 
+    $(document).ready(function() {
+        var dragging = false;
+        var maxHeight = 500; // Defina isso para a altura máxima desejada
 
-    var dragging = false;
+        // Quando o mouse é pressionado
+        $("#dragbutton").mousedown(function(event) {
+            dragging = true;
+        });
 
-    var maxHeight = -500;
-    var originalY = $(".bottomdrag").css("top");
-    $("#dragbutton").mousedown(function() {
-        dragging = true;
-    });
+        // Quando o mouse é liberado
+        $(document).mouseup(function(event) {
+            dragging = false;
+        });
 
-    $(document).mouseup(function() {
-        dragging = false;
-    });
+        // Manipula o movimento do mouse
+        $(document).mousemove(function(event) {
+            if (dragging) {
+                var y = event.pageY;
 
-    $(document).mousemove(function(event) {
-        if (dragging) {
+                // Garante que y não seja menor que maxHeight
+                if (y < maxHeight) {
+                    y = maxHeight;
+                }
 
-            var y = event.pageY;
+                // Opcional: Defina uma altura mínima, se necessário
+                var minHeight = 0; // Exemplo de altura mínima
+                if (y < minHeight) {
+                    y = minHeight;
+                }
 
-
-
-            if  (y < maxHeight) {
-                y = maxHeight;
+                $(".bottomdrag").css("top", y);
             }
+        });
 
-
-            $(".bottomdrag").css("top", y);
-        }
-    });
     $(".lupa").click(function () {
         var $searchWrapper = $(".search-wrapper");
         if ($searchWrapper.is(":visible")) {

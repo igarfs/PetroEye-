@@ -16,39 +16,7 @@ function addRow() {
   }
 
 
-  $(document).ready(function(){
-    
-    $("#elements").click(function(){
-        $("#elements4").toggle();
-    });
-    
-    var dragging = false;
-    
-    var maxHeight = -500; 
-    var originalY = $(".bottomdrag").css("top"); 
-    $("#dragbutton").mousedown(function() {
-        dragging = true;
-    });
 
-    $(document).mouseup(function() {
-        dragging = false;
-    });
-
-    $(document).mousemove(function(event) {
-        if (dragging) {
-            
-            var y = event.pageY;
-
-           
-
-            if  (y < maxHeight) {
-                y = maxHeight;
-            }
-
-            
-            $(".bottomdrag").css("top", y);
-        }
-    });
     $(".lupa").click(function () {
         var $searchWrapper = $(".search-wrapper");
         if ($searchWrapper.is(":visible")) {

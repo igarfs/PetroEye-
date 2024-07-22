@@ -13,23 +13,23 @@ header {
     left: 0;
     width: 100%;
     height: 8%;
-    z-index: 1000;    
+    z-index: 1000;
     }
-  
-  
+
+
     header ul {
-    color: #11111f; 
+    color: #11111f;
     }
-  
-  
+
+
   .logo {
     height: 5%;
     width: auto;
     margin-left: 50px;
-    
+
     position: fixed;
   }
-  
+
   h1 {
     color: white;
     font-family: Inter, var(--default-font-family);
@@ -40,7 +40,7 @@ header {
     transform: translateY(-50%);
     margin: 0 auto;
   }
-  
+
   .menu {
     cursor: pointer;
     position: fixed;
@@ -48,9 +48,9 @@ header {
     width: auto;
     float: left;
     }
-  
+
     .menu-wrapper {
-    
+
       position: absolute;
     top: -500px;
     left: 0;
@@ -58,12 +58,12 @@ header {
     height: 600%;
     background-color: #c9c9c9;
     padding: 0;
-    
+
     transition: top 0.5s;
     z-index: 0;
     }
     .menu-wrapper ul {
-  
+
       margin-top: 10%;
       height: 80%;
       width: 100%;
@@ -73,7 +73,7 @@ header {
       list-style: none;
       align-items: center;
       padding: 0px;
-  
+
     }
     a {
 
@@ -82,10 +82,10 @@ header {
       color:#000000 ;
 
     }
-  
-  
+
+
   .search-wrapper {
-    
+
     position: absolute;
     top: 25%;
     right: -500px;
@@ -96,25 +96,25 @@ header {
     border-radius: 25px;
     transition: left 0.5s;
   }
-  
+
   .search-bar {
-  
+
     width: 425px;
     height: 20px;
     padding: 10px 0px 10px 10px;
     margin-left:10px;
     border-radius: 20px;
-    border: none; 
-    position: relative; 
+    border: none;
+    position: relative;
     background-color: transparent;
     outline:none;
   }
-  
+
   .lupa {
     cursor: pointer;
-    position: absolute; 
-    right: 20px; 
-    top: 50%; 
+    position: absolute;
+    right: 20px;
+    top: 50%;
     transform: translateY(-50%);
     height: 25px;
     z-index: 10;
@@ -153,7 +153,7 @@ margin-bottom: 10px;
 table {
 width: 600px;
 border-collapse: collapse;
-margin-left: 500px;
+
 }
 
 th, td {

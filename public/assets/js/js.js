@@ -44,4 +44,4 @@ function addRow() {
           $searchWrapper.show();
           $searchWrapper.animate({ top: "100%" }, 100);
         }
-      });});
+      });

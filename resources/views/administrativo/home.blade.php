@@ -27,47 +27,7 @@
 
 
         <div class="bottomdrag">
-            <div id="table">
-                <table>
-
-                    <thead>
-                        <tr>
-                            <th scope="col">distribuição terra/mar</th>
-                            <td> </td>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">total petroleo</th>
-                            <td>xxxton</td>
-
-                        </tr>
-                        <tr>
-                            <th scope="row">total gas</th>
-                            <td>xxxton</td>
-
-                        </tr>
-
-
-                    </tbody>
-
-                </table>
-            </div>
-            <div id="text-001">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dapibus ultricies ante vitae facilisis.
-                    Vestibulum iaculis ultricies mattis. Aliquam erat volutpat. Fusce lectus lorem, ornare nec accumsan ut,
-                    venenatis vitae purus. Nunc eu urna ipsum. Nulla facilisi. Nullam vitae sollicitudin leo, quis egestas
-                    tellus. Praesent sagittis magna eget magna maximus, non cursus justo interdum. Vivamus non finibus
-                    neque, quis elementum elit. Vivamus vulputate efficitur efficitur.</p>
-            </div>
-
-            <div class="drag-title">
-                <h1>bacia de campos</h1>
-            </div>
-            <div class="drag-next">
-                <h2>campos>></h2>
-            </div>
+            <div id="item-list"></div>
             <div id="dragbutton"></div>
 
         </div>
@@ -84,7 +44,7 @@
 
 @push('scripts')
 <script>
- setTimeout(initMap, 3000);
+ setTimeout(initMap, 1000);
 
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -105,18 +65,49 @@
             var marker = new google.maps.Marker({
                 position: position,
                 map: map,
-                title: location.title
+               
+            });
+
+            marker.addListener("click", () => {
+                currentMarker = location; // Salva a localização atual
+                loadPoço(location.id); // Carrega os detalhes do poço
+
             });
 
             marker.addListener("click", () => {
                 $("#elements4").toggle();
                 $(".bottomdrag").css("top", "900px");
+
             });
+
         });
     }
 
 
+    function loadPoço(id) {
+            fetch(`/conteudo/${id}`)
+                .then(response => response.json())
+                .then(item => {
+                    var itemList = document.getElementById('item-list');
+                    itemList.innerHTML = ''; // Limpa o conteúdo anterior
+
+                    if (item.message) {
+                        itemList.textContent = item.message; // Exibe mensagem de erro se o poço não for encontrado
+                    } else {
+                        var itemElement = document.createElement('p');
+                        itemElement.textContent = `Tipo de Poço: ${item.tp}, Localização: ${item.loc}, Início: ${item.ini}, Profundidade: ${item.prof}, Status: ${item.stat}, Operador: ${item.ope}, Campo: ${item.cam}, Bacia: ${item.bac}`;
+                        itemList.appendChild(itemElement);
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar poço:', error));
+        }
+
+
+
+
 </script>
+
+
 
 
 @endpush

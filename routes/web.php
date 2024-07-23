@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,9 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\conteudo;
 
 
-Route::get('/', [MapController::class, 'administrativoHome'])->name('administrativo.home');
+Route::get('/conteudo/{id}', [conteudo::class, 'conteudo'])->name('conteudo');
+
+Route::get('/', [MapController::class, 'administrativohome'])->name('administrativo.home');
 
 /*
 Route::get('/', function () {

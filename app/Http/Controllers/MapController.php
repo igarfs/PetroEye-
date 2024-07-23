@@ -1,22 +1,19 @@
 <?php
 
+
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Location;
+use App\Models\dados_anp;
 
 class MapController extends Controller
 {
     public function administrativohome()
     {
-        // Array de endereços - pode vir de um banco de dados ou outra fonte de dados
-          // Busca todas as localizações do banco de dados
-
-          $locations = Location::all(['latitude as lat', 'longitude as lng', 'campo as title']);
-
+        // Busca todas as localizações
+        $locations = dados_anp::all(['id as id', 'LATITUDE_BASE_4C as lat', 'LONGITUDE_BASE_4C as lng', 'CAMPO as title'])->toArray();
 
         return view('administrativo.home', compact('locations'));
     }
 }
-
-

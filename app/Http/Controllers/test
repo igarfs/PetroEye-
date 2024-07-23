@@ -1,0 +1,19 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\DadosAnp;
+
+class MapController extends Controller
+{
+    public function administrativohome()
+    {
+        // Busca todas as localizações do banco de dados
+        $locations = DadosAnp::all(['LATITUDE_BASE_DD as lat', 'LONGITUDE_BASE_DD as lng', 'CAMPO as title']);
+
+
+        // Retorna a view 'administrativo.home' com os dados das localizações
+        return view('administrativo.home', compact('locations'));
+    }
+}

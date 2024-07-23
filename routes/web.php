@@ -19,7 +19,9 @@ use App\Http\Controllers\MapController;
 use App\Http\Controllers\conteudo;
 
 
-Route::get('/conteudo/{id}', [conteudo::class, 'conteudo'])->name('conteudo');
+
+Route::get('/conteudo/{id}', [conteudo::class, 'show'])->name('administrativo.home');
+
 
 Route::get('/', [MapController::class, 'administrativohome'])->name('administrativo.home');
 

@@ -19,6 +19,8 @@
     crossorigin="anonymous"></script>
 
     <script async src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_MAPS_API_KEY') }}&callback=initMap"> </script>
+    <!-- Adicione esta linha para usar a nova versão através de um CDN -->
+<script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
 
   <script src="/assets/js/header.js"></script>
   <script src="/assets/js/formularios.js"></script>

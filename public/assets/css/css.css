@@ -226,3 +226,26 @@ text-align: center;
     z-index: -3;
 
 }
+
+
+.conteudo {
+    display: none;
+    width: 100%;
+    color: black;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+    max-height: 90%;
+}
+
+.conteudo h3 {
+    margin-top: 0; /* Remove margem superior do título */
+    margin-bottom: 10px; /* Espaço inferior do título */
+}
+
+.conteudo p {
+    margin: 5px 0; /* Margens vertical pequena */
+    line-height: 1.5; /* Espaçamento entre linhas */
+    font-size: 14px; /* Tamanho da fonte */
+}

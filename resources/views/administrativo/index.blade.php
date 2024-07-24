@@ -39,13 +39,13 @@
 
     <div id="myNav" class="nav-list">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleMenu()">&times;</a>
-        <a href="bacia.php">Bacia</a>
-        <a href="campo.php">Campos</a>
-        <a href="pocos.php">Poços</a>
-        <a href="perfil.php">Perfil</a>
-        <a href="logistica.php">Logística</a>
-        <a href="historico.php">Historico</a>
-        <a href="sobre_nos.php">Sobre</a>
+        <a href="{{ route('bacia') }}">Bacia</a>
+    <a href="{{ route('campo') }}">Campos</a>
+    <a href="{{ route('pocos') }}">Poços</a>
+    <a href="{{ route('perfil') }}">Perfil</a>
+    <a href="{{ route('logistica') }}">Logística</a>
+    <a href="{{ route('historico') }}">Histórico</a>
+    <a href="{{ route('sobre_nos') }}">Sobre</a>
     </div>
 
   <div class="main-container">

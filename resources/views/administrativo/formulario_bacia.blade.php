@@ -6,21 +6,23 @@
     <div class="container">
         <div class="menu-block">
             <ul>
-                <li><button onclick="location.href='formulario_bacia.php'">Formulário Bacias</button></li>
+                <li><button onclick="location.href='{{ route('bacia') }}'">Formulário Bacias</button></li>
             </ul>
         </div>
         <div class="menu-block">
             <ul>
-                <li><button onclick="location.href='formulario_poco.php'">Formulário Poços</button></li>
+                <li><button onclick="location.href='{{ route('pocos') }}'">Formulário Poços</button></li>
             </ul>
         </div>
         <div class="menu-block">
             <ul>
-                <li><button onclick="location.href='formulario_campos.php'">Formulário Campos</button></li>
+                <li><button onclick="location.href='{{ route('campo') }}'">Formulário Campos</button></li>
             </ul>
         </div>
+
     </div>
-    <h1>Preencha os campos</h1>
+    <div class="forms1">
+        <h1 class="h12">Preencha os campos</h1>
     <div class="form-group">
         <label for="nome">Nome</label><br><br>
         <input type="text" id="nome" placeholder="Nome da bacia" required>
@@ -81,6 +83,7 @@
         </tbody>
     </table>
     <button class="botton" onclick="addRow('tableProdutos')">+Adicionar Linha</button>
+    </div>
 </body>
 
 @endsection

@@ -5,13 +5,13 @@ body {
      background-color: #f0eff6;
  }
  .container {
-     width: 250px;
-     font-size: 5px;
-     color: #fff;
-     position: fixed;
-     height: 100%;
-     padding-top: 20px;
-     margin-top: -25px;
+    width: 15%;
+    /* font-size: 5px; */
+    color: #fff;
+    position: fixed;
+    height: 100%;
+    /* padding-top: 20px; */
+    margin-top: -25px;
  }
  .menu-block ul {
      list-style-type: none;
@@ -42,12 +42,12 @@ body {
      background-color: lightgray;
      text-align: center;
      margin-top: 80px;
-     margin-left: 290px;
+
      font-size: 25px;
      font-family: Arial, sans-serif;
  }
  .form-group {
-     margin-left: 290px;
+
      margin-top: 30px;
      font-size: 25px;
  }
@@ -78,7 +78,7 @@ body {
      text-align: center;
  }
  .botton {
-     margin-left: 290px;
+
      width: 5%;
      height: 5%;
      padding: 8px;
@@ -89,12 +89,32 @@ body {
      border-radius: 5px;
      cursor: pointer;
  }
- .dataTable {
-     margin-left: 290px;
- }
- p {
-     margin-left: 290px;
- }
+
  td:empty:after {
      content: '\00a0'; /* Garante que células vazias sejam clicáveis */
+ }
+
+ .forms1{
+
+    width: 75%;
+    float: right;
+
+ }
+ .h12{
+
+    color: #12111e;
+    font-family: Inter, var(--default-font-family);
+    text-align: center;
+    width: 100%;
+    position: unset;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    padding: 15px 30px;
+    background-color: lightgray;
+    text-align: center;
+    margin-top: 80px;
+
+    font-size: 25px;
+
  }
